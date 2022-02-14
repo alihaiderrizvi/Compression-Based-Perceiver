@@ -69,6 +69,8 @@ def parse_option():
     # other setting
     parser.add_argument('--cosine', action='store_true',
                         help='using cosine annealing')
+    parser.add_argument('--exp', action='store_true',
+                        help='using exp lr loss')
     parser.add_argument('--syncBN', action='store_true',
                         help='using synchronized batch normalization')
     parser.add_argument('--warm', action='store_true',
