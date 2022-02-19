@@ -9,3 +9,6 @@ python3 main_linear.py --batch_size 1024 --model resnet18 --dataset cifar100 --c
 
 mean = (0.41044191,0.45704237,0.46365224)
 std = (4.37454361,4.06389989,4.11659655)
+
+
+python3 distillation.py --epochs 3000 --teacher_model resnet34 --student_model resnet18 --dataset cifar10 --ckpt ./save/SupCon/cifar10_models/SupCon_cifar10_resnet34_lr_0.8_decay_0.0001_bsz_1024_temp_0.07_trial_0_cosine_warm/last.pth 
