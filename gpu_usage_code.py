@@ -1,16 +1,14 @@
-import os,sys,humanize,psutil,GPUtil
+import os,sys,GPUtil
 import time
 
-# Define function
 def mem_report(GPUs):
   for i, gpu in enumerate(GPUs):
     return gpu.memoryFree
-
 
 while True:
 	GPUs = GPUtil.getGPUs()
 	time.sleep(4)
 	space = mem_report(GPUs)
 	print(space)
-	if space > 1000:
-		os.system('python3 main_supcon.py --batch_size 1024 --learning_rate 100 --temp 0.07 --cosine --epochs 3000 --model resnet18 --dataset cifar10 --method SupCon')
+	if space >= 11000:
+		os.system('python3 main_supcon.py --dataset path --data_folder custom_dataset_split/ --mean 0.41044191,0.45704237,0.46365224 --std 4.37454361,4.06389989,4.11659655 --batch_size 512 --epochs 3200 --learning_rate 1.4 --model resnet34  --exp')

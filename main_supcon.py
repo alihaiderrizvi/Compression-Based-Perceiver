@@ -28,7 +28,7 @@ def parse_option():
 
     parser.add_argument('--print_freq', type=int, default=10,
                         help='print frequency')
-    parser.add_argument('--save_freq', type=int, default=25,
+    parser.add_argument('--save_freq', type=int, default=100,
                         help='save frequency')
     parser.add_argument('--batch_size', type=int, default=256,
                         help='batch_size')
@@ -165,14 +165,13 @@ def set_loader(opt):
                                           transform=TwoCropTransform(train_transform),
                                           download=True)
     elif opt.dataset == 'path':
-        train_dataset = datasets.ImageFolder(root=opt.data_folder+'train/',
-                                            transform=TwoCropTransform(train_transform))
+        train_dataset = datasets.ImageFolder(root=opt.data_folder+'train/', transform=TwoCropTransform(train_transform))
     else:
         raise ValueError(opt.dataset)
 
     train_sampler = None
     train_loader = torch.utils.data.DataLoader(
-        train_dataset, batch_size=opt.batch_size, shuffle=(train_sampler is None),
+        train_dataset, batch_size=opt.batch_size, shuffle=True,
         num_workers=opt.num_workers, pin_memory=True, sampler=train_sampler)
 
     return train_loader
