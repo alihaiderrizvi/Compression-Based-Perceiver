@@ -1,9 +1,9 @@
 python3 main_supcon.py --batch_size 2048 --learning_rate 0.8 --temp 0.07 --cosine --epochs 3500 --model resnet18 --dataset cifar100 --method SupCon
 
-python3 main_linear.py --batch_size 32 --model resnet34 --dataset path --data_folder custom_dataset_split/ --ckpt ./save/SupCon/path_models/SupCon_path_resnet34_lr_0.1_decay_0.0001_bsz_512_temp_0.07_trial_0_cosine_warm/ckpt_epoch_1575.pth
+python3 main_linear.py --batch_size 10 --model resnet50 --dataset path --data_folder custom_dataset_split/ --ckpt ./save/SupCon/path_models/SupCon_path_resnet50_lr_1.6_decay_0.0001_bsz_128_temp_0.07_trial_0_exp/ckpt_epoch_1700.pth
 
 #further training on pretrained model
-python3 main_supcon.py --batch_size 512 --epochs 3000 --model resnet34 --dataset path --data_folder custom_dataset_split/ --learning_rate 1.4 --mean 0.41044191,0.45704237,0.46365224 --std 4.37454361,4.06389989,4.11659655 --exp
+python3 main_supcon.py --batch_size 256 --epochs 10000 --model resnet50 --dataset path --data_folder custom_dataset_split/ --learning_rate 1.6 --mean 0.41044191,0.45704237,0.46365224 --std 4.37454361,4.06389989,4.11659655 --exp
 
 python3 main_linear.py --batch_size 1024 --model resnet18 --dataset cifar100 --ckpt ./save/SupCon/cifar100_models/SupCon_cifar100_resnet18_lr_0.8_decay_0.0001_bsz_1024_temp_0.07_trial_0_cosine_warm/last.pth
 
@@ -11,4 +11,4 @@ mean = (0.41044191,0.45704237,0.46365224)
 std = (4.37454361,4.06389989,4.11659655)
 
 
-python3 distillation.py --epochs 3000 --teacher_model resnet34 --student_model resnet18 --dataset cifar10 --ckpt ./save/SupCon/cifar10_models/SupCon_cifar10_resnet34_lr_0.8_decay_0.0001_bsz_1024_temp_0.07_trial_0_cosine_warm/last.pth 
+python3 distillation.py --epochs 3000 --teacher_model resnet34 --student_model resnet18 --dataset cifar10 --ckpt ./save/SupCon/cifar10_models/SupCon_cifar10_resnet34_lr_0.8_decay_0.0001_bsz_1024_temp_0.07_trial_0_cosine_warm/last.pth
