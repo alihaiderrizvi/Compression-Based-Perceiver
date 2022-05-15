@@ -58,7 +58,7 @@ def adjust_learning_rate(args, optimizer, epoch):
                 1 + math.cos(math.pi * epoch / args.epochs)) / 2
     elif args.exp:
     
-        lr = args.learning_rate * (1-0.0009)**epoch
+        lr = args.learning_rate * (1-0.0009)**(epoch/4)
         #if lr <= 0.07:
             #lr = 0.07
     else:

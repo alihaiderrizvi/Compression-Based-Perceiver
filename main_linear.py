@@ -284,8 +284,8 @@ def main():
         # compute loss
         with torch.no_grad():
             # features = model.encoder.extract_features(images)
-            features = model.encoder(images)
-            features = model.head(features)
+            features = model.encoder.extract_features(images)
+            # features = model.head(features)
 
         f = features.detach().cpu().numpy()
         l = labels.detach().cpu().numpy()
@@ -317,8 +317,8 @@ def main():
         # compute loss
         with torch.no_grad():
             # features = model.encoder.extract_features(images)
-            features = model.encoder(images)
-            features = model.head(features)
+            features = model.encoder.extract_features(images)
+            # features = model.head(features)
 
         f = features.detach().cpu().numpy()
         l = labels.detach().cpu().numpy()
