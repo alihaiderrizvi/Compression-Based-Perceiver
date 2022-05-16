@@ -1,5 +1,5 @@
 # Compression Based Perceiver.
-This repository contains the Final Source for our final year project CS 492: Group 12 - Compression Based Perceiver at Habib University.
+This repository contains the Final Source Code for our final year project CS 492: Group 12 - Compression Based Perceiver at Habib University.
 ## Team Members:
 1. Shams Arfeen. (sa05169@st.habib.edu.pk)
 2. Umme Salma. (us04315@st.habib.edu.pk)
@@ -7,7 +7,7 @@ This repository contains the Final Source for our final year project CS 492: Gro
 4. Muhammad Munawwar Anwar (ma04289@st.habib.edu.pk)
 ## Supervisors:
 1. Dr. Syed Sohaib Ali. (Supervisor, Assistant Professor, Computer Science - Habib University)
-2. Dr. Syed Sohaib Ali. (Co-supervisor, Assistant Professor, Electrical & Computer Engineering - Habib University ) 
+2. Dr. Muhammad Farhan (Co-supervisor, Assistant Professor, Electrical & Computer Engineering - Habib University ) 
 3. Syed Nouman Hasany.  (External Supervisor, Erasmus Mundus Joint Master Degree in Medical Imaging and Applications - Universitat de Girona)
 4. Syed Talal Wasim. (External Supervisor, Erasmus Mundus Joint Master Degree in Image Processing and Computer Vision - Universidad Aut ́onoma de Madrid)
 
